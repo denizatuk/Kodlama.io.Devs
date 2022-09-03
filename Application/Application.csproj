@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Candidates\Commands\" />
+    <Folder Include="Features\Candidates\Dtos\" />
+    <Folder Include="Features\Candidates\Models\" />
+    <Folder Include="Features\Candidates\Rules\" />
+    <Folder Include="Features\Candidates\Queries\" />
+    <Folder Include="Features\Candidates\Profiles\" />
+    <Folder Include="Features\Employers\Commands\" />
+    <Folder Include="Features\Employers\Dtos\" />
+    <Folder Include="Features\Employers\Models\" />
+    <Folder Include="Features\Employers\Rules\" />
+    <Folder Include="Features\Employers\Queries\" />
+    <Folder Include="Features\Employers\Profiles\" />
+    <Folder Include="Features\Skills\Models\" />
+    <Folder Include="Features\Skills\Rules\" />
+    <Folder Include="Features\Skills\Queries\" />
+    <Folder Include="Features\Skills\Profiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+</Project>
