@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Skills.Commands.CreateSkill
 {
-    public partial class CreateSkillCommand : IRequest<CreatedSkillDto>
+    public class CreateSkillCommand : IRequest<CreatedSkillDto>
     {
         public string Name { get; set; }
         public class CreateSkillCommandHandler : IRequestHandler<CreateSkillCommand, CreatedSkillDto>
@@ -30,6 +30,7 @@ namespace Application.Features.Skills.Commands.CreateSkill
             public async Task<CreatedSkillDto> Handle(CreateSkillCommand request, CancellationToken cancellationToken)
             {
                 await _skillBussinesRules.SkillNameCanNotBeDuplicatedWhenInserted(request.Name);
+
                 Skill mappedSkill = _mapper.Map<Skill>(request);
                 Skill createdSkill = await _skillRepository.AddAsync(mappedSkill);
                 CreatedSkillDto createdSkillDto = _mapper.Map<CreatedSkillDto>(createdSkill);

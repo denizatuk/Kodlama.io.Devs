@@ -21,7 +21,7 @@ namespace Application.Features.Skills.Rules
         public async Task SkillNameCanNotBeDuplicatedWhenInserted(string name)
         {
             IPaginate<Skill> result = await _skillRepository.GetListAsync(b => b.Name == name);
-            if (result.Items.Any()) throw new BusinessException("Skill Name is exists. Not Created");
+            if (result.Items.Any()) throw new BusinessException("Skill Name is exists.");
         }
     }
     
