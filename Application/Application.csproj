@@ -23,12 +23,11 @@
     <Folder Include="Features\Employers\Rules\" />
     <Folder Include="Features\Employers\Queries\" />
     <Folder Include="Features\Employers\Profiles\" />
-    <Folder Include="Features\Skills\Models\" />
-    <Folder Include="Features\Skills\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Collection.EntityFrameworkCore" Version="8.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.1" />
     <PackageReference Include="MediatR" Version="10.0.1" />

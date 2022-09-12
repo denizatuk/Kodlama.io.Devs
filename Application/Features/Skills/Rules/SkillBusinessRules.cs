@@ -23,6 +23,15 @@ namespace Application.Features.Skills.Rules
             IPaginate<Skill> result = await _skillRepository.GetListAsync(b => b.Name == name);
             if (result.Items.Any()) throw new BusinessException("Skill Name is exists.");
         }
+        public void SkillShouldExistWhenRequested(Skill skill)
+        {
+            if (skill == null) throw new BusinessException("Requested skill does not exist");
+        }
+
+        public void SkillShouldExist(Skill? existingSkill)
+        {
+            if (existingSkill == null) throw new BusinessException("Skill does not exist");
+        }
     }
     
 }
